@@ -234,8 +234,8 @@ class CaffeineDrink:
     def drinkInfo(self):
         return " description: " + self.description + ", size: " + self.size
 
-    def getPrice(self):
-        pass
+    # def getPrice(self):
+    #    pass
 
 
 class Tea(CaffeineDrink):
@@ -244,11 +244,8 @@ class Tea(CaffeineDrink):
         self.quantity = quantity
 
     def getDescription(self):
-        print(self.getDescription())
-
-    def getPrice(self):
-        print("%d DKK", self.quantity * 10)
+        return "quantity: " + str(self.quantity) + " " + self.drinkInfo()
 
 
 tea = Tea(5)
-tea.getDescription()
+print(tea.getDescription())
